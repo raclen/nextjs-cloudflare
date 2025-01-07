@@ -1,4 +1,7 @@
+"use client"; // 必须在文件顶部声明
+
 import Link from 'next/link';
+import react, { useState, useEffect } from 'react';
 
 type BlogPost = {
     id: string;
@@ -6,11 +9,22 @@ type BlogPost = {
     description: string;
 };
 
-type Props = {
-    blogPosts: BlogPost[];
-};
 
-export default function Home({ blogPosts }: Props) {
+
+export default function Home() {
+    const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+
+
+    const getStaticProps = async ()=> {
+        const res = await fetch('http://localhost:3000/api/posts'); // 部署后替换为 Cloudflare Pages 的域名
+        const blogPosts1: BlogPost[] = await res.json();
+        setBlogPosts(blogPosts1)
+    }
+
+    useEffect(() => {
+        getStaticProps()
+    }, []);
+
     return (
         <div style={{ padding: '20px' }}>
             <h1>My Blog</h1>
@@ -30,14 +44,4 @@ export default function Home({ blogPosts }: Props) {
     );
 }
 
-// 使用 getStaticProps 获取数据
-export async function getStaticProps() {
-    const res = await fetch('http://localhost:3000/api/posts'); // 部署后替换为 Cloudflare Pages 的域名
-    const blogPosts: BlogPost[] = await res.json();
 
-    return {
-        props: {
-            blogPosts,
-        },
-    };
-}
