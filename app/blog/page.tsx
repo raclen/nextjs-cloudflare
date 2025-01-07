@@ -17,6 +17,9 @@ export default function Home() {
 
     const getStaticProps = async ()=> {
         const res = await fetch('http://localhost:3000/api/posts'); // 部署后替换为 Cloudflare Pages 的域名
+
+        console.log(res);
+        
         const blogPosts1: BlogPost[] = await res.json();
         setBlogPosts(blogPosts1)
     }
@@ -31,7 +34,7 @@ export default function Home() {
             <ul>
                 {blogPosts.map((post) => (
                     <li key={post.id} style={{ marginBottom: '10px' }}>
-                        <Link href={`/posts/${post.id}`}>
+                        <Link href={`/posts/${post.id}`} legacyBehavior>
                             <a>
                                 <h2>{post.title}</h2>
                                 <p>{post.description}</p>
