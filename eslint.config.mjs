@@ -15,6 +15,7 @@ const eslintConfig = [
     rules: {
       "@typescript-eslint/no-unused-vars": "off", // 或者 "warn" 如果仅希望警告
     },
+    ignores: ["node_modules", "app",], // 忽略的文件夹
   },
 ];
 

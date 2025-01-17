@@ -44,7 +44,7 @@ async function getStockIndexData(params: { stockCode: string, endDate: string, s
 
         const klineData = response.data.data.klines;
 
-        const stockData = [];
+        const stockData: any[] = [];
 
         klineData.forEach(line => {
             const [dateStr, open, close, high, low, volume,tradingVolume, amplitude, riseandfall, riseandfallamount, turnoverrate] = line.split(',');
