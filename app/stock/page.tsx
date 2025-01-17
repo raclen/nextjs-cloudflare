@@ -5,11 +5,30 @@ import { Form, Input, Button, Table, Card, DatePicker } from 'antd';
 import axios from 'axios';
 export const runtime = 'edge';
 
+type StockData = {
+    date: string;
+    open: number;
+    close: number;
+    high: number;
+    low: number;
+    volume: number;
+    tradingVolume: number;
+    amplitude: number;
+    riseandfall: number;
+    riseandfallamount: number;
+    turnoverrate: number;
+};
+type StockQueryValues = {
+    stockId: string;
+    startDate?: string;
+    endDate?: string;
+};
+
 export default function StockQuery() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    const fetchStockData = async (values) => {
+    const fetchStockData = async (values:StockQueryValues) => {
         setLoading(true);
         try {
             const response = await axios.post('/api/stock', {
@@ -25,7 +44,7 @@ export default function StockQuery() {
         }
     };
 
-    const onFinish = (values) => {
+    const onFinish = (values:StockQueryValues) => {
         console.log('Received values:', values);
         fetchStockData(values);
     };

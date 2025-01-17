@@ -46,7 +46,7 @@ async function getStockIndexData(params: { stockCode: string, endDate: string, s
 
         const stockData: any[] = [];
 
-        klineData.forEach(line => {
+        klineData.forEach(line:string => {
             const [dateStr, open, close, high, low, volume,tradingVolume, amplitude, riseandfall, riseandfallamount, turnoverrate] = line.split(',');
             const date = moment(dateStr).format('YYYY-MM-DD')
             stockData.push({
@@ -67,7 +67,7 @@ async function getStockIndexData(params: { stockCode: string, endDate: string, s
         });
         return stockData
 
-    } catch (error) {
+    } catch (error: any) {
         console.error('数据获取失败：', error.message);
         if (error.response) {
             console.error('错误详情：', error.response.data);
