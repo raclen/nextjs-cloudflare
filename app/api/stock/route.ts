@@ -46,7 +46,7 @@ async function getStockIndexData(params: { stockCode: string, endDate: string, s
 
         const stockData: any[] = [];
 
-        klineData.forEach(line:string => {
+        klineData.forEach((line:string) => {
             const [dateStr, open, close, high, low, volume,tradingVolume, amplitude, riseandfall, riseandfallamount, turnoverrate] = line.split(',');
             const date = moment(dateStr).format('YYYY-MM-DD')
             stockData.push({
