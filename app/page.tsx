@@ -8,8 +8,11 @@ export default function Home() {
         <div style={{ marginBottom: '20px' }}>
           <a href="/blog" style={{ fontSize: '18px', color: '#1890ff' }}>Blog</a>
         </div>
-        <div>
+        <div style={{ marginBottom: '20px' }}>
           <a href="/stock" style={{ fontSize: '18px', color: '#1890ff' }}>Stock</a>
+        </div>
+        <div>
+          <a href="/zone" style={{ fontSize: '18px', color: '#1890ff' }}>Zone</a>
         </div>
       </Card>
     </div>
