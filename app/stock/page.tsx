@@ -25,7 +25,7 @@ type StockQueryValues = {
 };
 
 export default function StockQuery() {
-    const [data, setData] = useState([]);
+    const [data, setData] = useState<StockData[]>([]);
     const [loading, setLoading] = useState(false);
 
     const fetchStockData = async (values:StockQueryValues) => {
@@ -142,7 +142,7 @@ export default function StockQuery() {
             <Card>
                 <Table 
                     dataSource={data} 
-                    key={data.date}
+                    rowKey={(record) => record.date}  // 使用 rowKey 而不是 key
                     columns={columns}
                     loading={loading} 
                     pagination={{ pageSize: 5 }}
