@@ -17,7 +17,7 @@ export default function Home() {
 
 
     const getStaticProps = async ()=> {
-        const res = await fetch('http://localhost:3000/api/posts'); // 部署后替换为 Cloudflare Pages 的域名
+        const res = await fetch('/api/posts'); // 部署后替换为 Cloudflare Pages 的域名
 
         console.log(res);
         
