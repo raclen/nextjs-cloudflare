@@ -20,8 +20,8 @@ type StockData = {
 };
 type StockQueryValues = {
     stockId: string;
-    startDate?: object;
-    endDate?: object;
+    startDate?: any;
+    endDate?: any;
 };
 
 export default function StockQuery() {
