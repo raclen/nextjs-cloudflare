@@ -12,6 +12,7 @@ export default async function PostsPage() {
   }
 
   return (
+    <div style={{background: 'antiquewhite'}}>
     <div className={styles.container}>
       <h1 className={styles.title}>文章列表</h1>
       <ul className={styles.list}>
@@ -28,6 +29,7 @@ export default async function PostsPage() {
           )
         })}
       </ul>
+    </div>
     </div>
   )
 }

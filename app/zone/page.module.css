@@ -1,7 +1,5 @@
 /* app/posts/[category]/[slug]/page.module.css */
-body {
-  background: antiquewhite;
-}
+
 
 .container {
   max-width: 800px;

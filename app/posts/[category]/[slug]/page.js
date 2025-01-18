@@ -14,6 +14,7 @@ export default async function PostPage({ params }) {
   }
  
   return (
+    <div style={{background: 'antiquewhite'}}>
     <div className={`${styles.container}`}>
       <h1 className={styles.title}>{post.title}</h1>
       <p className={styles.date}>{post.date}</p>
@@ -22,6 +23,7 @@ export default async function PostPage({ params }) {
                {/* 渲染内容 */}
        <PostContent content={post.contentHtml} />
         </div>
+    </div>
     </div>
   )
 }
