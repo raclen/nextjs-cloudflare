@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Table, Card, DatePicker } from 'antd';
 import axios from 'axios';
-export const runtime = 'edge';
 
 type StockData = {
     date: string;
