@@ -1,8 +1,9 @@
 
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import 'prismjs/themes/prism-tomorrow.css' 
 import "./globals.css";
+// 引入 highlight.js 的样式，例如 GitHub 风格
+import 'highlight.js/styles/github.css';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

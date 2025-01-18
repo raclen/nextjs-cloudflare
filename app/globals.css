@@ -1,6 +1,8 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --background: #ffffff;
@@ -19,3 +21,130 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* styles/markdown-styles.css */
+
+/* 标题样式 */
+.markdown h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.markdown h2 {
+  font-size: 1.75em;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.markdown h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* 段落样式 */
+.markdown p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* 列表样式 */
+.markdown ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.markdown ul li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+}
+
+.markdown ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.markdown ol li {
+  list-style-type: decimal;
+  margin-bottom: 8px;
+}
+
+/* 链接样式 */
+.markdown a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+}
+
+/* 加粗和斜体 */
+.markdown strong {
+  font-weight: bold;
+}
+
+.markdown em {
+  font-style: italic;
+}
+
+/* 引用块样式 */
+.markdown blockquote {
+  border-left: 4px solid #dfe2e5;
+  padding-left: 16px;
+  color: #6a737d;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+/* 表格样式 */
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.markdown table th,
+.markdown table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.markdown table th {
+  background-color: #f6f8fa;
+  font-weight: bold;
+}
+/* 样式调整，用于代码高亮 */
+.markdown pre {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  /* padding: 12px; */
+  position: relative;
+  overflow-x: auto;
+}
+
+.markdown code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #e83e8c;
+}
+
+
+  /* 复制按钮样式 */
+  .copy-button {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    padding: 2px 5px;
+    /* background-color: #ededed; */
+    color: #6a737d;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 2px;
+    z-index: 10;
+  }
+  
+  /* .copy-button:hover {
+    background-color: #005bb5;
+  } */
