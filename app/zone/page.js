@@ -12,7 +12,7 @@ export default async function PostsPage() {
   }
 
   return (
-    <div style={{background: 'antiquewhite'}}>
+    <div style={{background: 'antiquewhite',height: '100%'}}>
     <div className={styles.container}>
       <h1 className={styles.title}>文章列表</h1>
       <ul className={styles.list}>
