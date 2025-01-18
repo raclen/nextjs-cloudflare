@@ -1,5 +1,6 @@
 
 import { NextResponse } from 'next/server';
+export const runtime = 'edge';
 
 const blogPosts = [
     { id: '1', title: 'First Blog Post', description: 'This is the first blog post.' },
