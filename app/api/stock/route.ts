@@ -4,10 +4,6 @@ import axios from 'axios'
 import moment from 'moment'
 
 
-export const runtime = 'edge';
-
-
-
 
 
 async function getStockIndexData(params: { stockCode: string, endDate: string, startDate: string, Prefix: string }) {

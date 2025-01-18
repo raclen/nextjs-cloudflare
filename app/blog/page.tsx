@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import react, { useState, useEffect } from 'react';
-export const runtime = 'edge';
 
 type BlogPost = {
     id: string;
